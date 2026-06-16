@@ -307,7 +307,7 @@ foreach ($class as $category => $albums) {
 // 开始渲染左侧菜单
 echo "<div id='left-sidebar'>";
 echo "<a href='../../'><img src='$home_cover' style='    margin: 0px 0 -60px 0;' alt='Logo'></a>";
-echo "<div class=\"sidebar-logo-area\"></div>";
+//echo "<div class=\"sidebar-logo-area\"></div>";
 echo '      <a href="#" class="album-category" data-category="all">所有相册</a>';
 
 // 主分类迭代
@@ -337,7 +337,7 @@ echo '      <a href="#" class="album-category" data-category="3d">3D相册</a>';
 echo "      <div class='album-list-container' data-for-category='3d'><a href='../../3d/index.php' class='album-link'><span>\u{1F5BC}\u{FE0F} 预览</span><span class='album-badge'>$total3dCount</span></a></div>";
 
 // 【已整合】直接跳转不进入手风琴拦截的“关于”菜单
-echo '      <a href="https://img.ximi.me/#modalA" target="_blank" class="sidebar-link-direct">关于</a>';
+echo '      <a href="https://img.hhqq.net/#modalA" target="_blank" class="sidebar-link-direct">关于</a>';
 
 // 原始数据桥接区
 echo '      <div class="album-list-container" id="raw-data-holder" style="display:none;">';
@@ -391,7 +391,7 @@ echo '</div>';
         // =================================================== 
         toggleBtn.addEventListener('click', function(e) {
             e.stopPropagation(); // 阻止事件冒泡
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 268) {
                 document.body.classList.toggle('sidebar-open');
             } else {
                 document.body.classList.toggle('sidebar-hidden');
@@ -406,7 +406,7 @@ echo '</div>';
 
         // 手机端点击侧边栏外部时自动收起
         document.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 268) {
                 if (!sidebar.contains(e.target) && e.target !== toggleBtn && !toggleBtn.contains(e.target)) {
                     document.body.classList.remove('sidebar-open');
                 }
