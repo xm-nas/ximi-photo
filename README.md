@@ -1,4 +1,4 @@
-# 🖼️ Ximi Gallery (希米相册管理系统)
+# 🖼️ Ximi Gallery (希米个人图册)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-v5.01-blue.svg?style=flat-square" alt="Version">
