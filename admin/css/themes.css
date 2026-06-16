@@ -1,0 +1,317 @@
+body {
+             /* font-family: Arial, sans-serif; */
+             /*background-color: #f9f9f9;  设置背景颜色 background: linear-gradient(180deg, #fed6e3, #c0efec) ;*/
+             /* background-image: linear-gradient(to right, #fed6e3, #c0efec); */
+}
+h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700; /* 使用粗体 */
+}
+
+p {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 400; /* 使用正常字体粗细 */
+}
+
+
+h2 {
+    scroll-margin-top: 70px; /* 根据你的页眉高度调整 */
+}
+h3 {
+    font-size: 1.4em;
+    margin-top: -7px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* 保持链接与文本的颜色一致 */
+}
+
+a:hover {
+    text-decoration: none; /* 悬停时显示下划线 */
+    color: #ff6a6a; /* 悬停时改变颜色 */
+}
+
+
+hr {
+    border: none;               /* 去掉默认边框 */
+    height: .8px;                /* 设置水平线的高度 */
+    background-color: #ff6a6a;    /*32CD32设置背景颜色为绿色 */
+    margin: 2px 0;              /* 设置上下边距为1px，左右边距为0 */
+}
+/*==========index.php================*/
+.list_dir_title {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 使子元素分布在行的两端 */
+    align-items: center; /* 垂直居中对齐子元素 */
+    width: 100%; /* 宽度设置为100%以适应容器 */
+    padding: 1px; /* 可选：设置内边距 */
+    box-sizing: border-box; /* 包括内边距和边框在宽度和高度计算中 */
+}
+
+.left {
+    /* 左边样式 */
+    text-align: left; /* 确保文本在容器内左对齐 */
+    max-width: calc(100% - 75px); /* 设置最大宽度为 100% - 75px */
+    white-space: nowrap; /* 禁止文本换行 */
+    overflow: hidden; /* 如果内容超出，隐藏溢出 */
+    text-overflow: ellipsis; /* 使用省略号表示溢出的文本 */
+    height: 28px; /* 设置高度 */
+    font-size: 16px; /* 设置字体大小 */
+    color: #000; /* 设置字体颜色 */
+}
+
+.right {
+    /* 右边样式 */
+    text-align: right; /* 确保文本在容器内右对齐 */
+    max-width: 375px; /* 设置最大宽度为 75px */
+    white-space: nowrap; /* 禁止文本换行 */
+    overflow: hidden; /* 隐藏溢出 */
+    text-overflow: ellipsis; /* 使用省略号表示溢出的文本 */
+    height: 28px; /* 设置高度 */
+    font-size: 16px; /* 设置字体大小 */
+    color: #000; /* 设置字体颜色 */
+}
+
+/* ====== 顶部导航样式 ====== */
+.header {
+    position: fixed; /* 将导航栏固定在页面顶部 */
+    align-items: center;
+    top: 0px; /* 距离页面顶部为 0 像素 */
+    width: 100%; /* 800px导航栏的宽度为 800 像素 */
+    border-bottom: 1px solid #f9f9f9; /*底部添加一个 1 像素宽的灰色边框 */
+    /* background-image: linear-gradient(to right, #ffffff, #ffffff); */
+    height: 52px;
+    z-index: 1000; /* 确保导航栏在页面其他内容之上显示 */
+    background: #ffffff;
+}
+
+/* 顶部导航和搜索容器 */
+.header-container {
+     flex-wrap: wrap; /* 允许换行，防止内容溢出 */
+    gap: 0.8rem; /* 链接之间的间距 */
+    padding: 0.5rem 0.8rem; /* 上下内边距为 0.5rem，左右内边距为 1rem */
+    /*max-width: 800px;  最大宽度为 800px */
+    font-size: 24px; /* 设置标题菜单文字大小为 20px */
+    text-align: center; /* 文本左对齐 */
+    margin: 0 auto; /* 上下外边距为 0，左右自动居中对齐 */
+
+}
+
+/* 链接样式 */
+.header-container a {
+    text-decoration: none; /* 去除下划线 */
+    /* color: #007BFF; 链接颜色 */
+    font-size: 24px; /* 字体大小 */
+    margin-right: 1rem; /* 链接之间的间距 */
+}
+
+.header-container a:hover {
+    /* text-decoration: underline; 悬停时添加下划线 */
+}
+
+
+
+/* ====== 页脚样式 ====== */
+/**/
+.footer {
+    position: fixed; /* 将页脚固定在页面底部 */
+    left: 0; /* 页脚左侧与页面左边缘对齐 */
+    bottom: 0; /* 页脚底部与页面底边缘对齐 */
+    width: 100%; /* 页脚宽度占据整个页面 */
+    text-align: center; /* 文本内容居中对齐 */
+    /*   background-color: 	#f9f9f9; 设置背景颜色为白色    #ffffff       	#696969          */
+    border-top: 1px solid #f9f9f9; /*顶部添加一个 1 像素宽的灰色边框 */
+    padding: 2px 0; /* 上下内边距为 8 像素，左右内边距为 0 */
+    line-height: 8px; /* 设置文本行距为 10 像素 */
+    font-size: 14px; /* 设置文本字体大小为 14 像素 */
+    background: #fff;
+    /* background-image: linear-gradient(to right, #fed6e3, #c0efec); */
+    height: 35px;
+}
+
+
+/* ====== 通用居中容器样式 ====== */
+.center1 {
+    width: 1000px; /* 容器宽度为 800 像素 */
+     /* margin: 70px auto 80px;容器顶部距离页面 150 像素，左右居中对齐，底部无外边距 */
+   padding: 10px 20px 10px 20px; /* 上内边距为 10px，左内边距为 20px，下内边距为 10px，右内边距为 30px */
+    box-sizing: border-box; /* 包括内边距和边框在内计算容器宽度 */
+    padding-bottom: 15px; /* 增加下边距，避免内容被页脚遮挡 */
+    background-color: 	#f9f9f9; /* 设置背景颜色为白色    #ffffff       	#696969          */
+  border-radius: 10px; /*10px   */
+  /*box-shadow:  */
+   /*               -3px 0 10px rgba(0, 0, 0, 0.3),左边阴影 */
+   /*                3px 0 10px rgba(0, 0, 0, 0.3);右边阴影 */
+/*opacity: 0.6;  设置透明度为 50% */
+ /* background-color: rgba(255, 255, 255, 0.7); 半透明背景颜色，80% 不透明度 */
+}
+@media screen and (max-width: 800px) {
+.center1 {
+     width: calc(100% - 20px); /* 容器宽度为 800 像素 */
+    margin: 65px 5px 80px; /* 容器顶部距离页面 150 像素，左右居中对齐，底部无外边距 */
+    padding: 5px 10px; /* 上下内边距为 0，左右内边距为 20 像素 */
+    box-sizing: border-box; /* 包括内边距和边框在内计算容器宽度 */
+    /* padding-bottom: 60px; 增加下边距，避免内容被页脚遮挡 */
+ background-color: rgba(255, 255, 255, 0.5); /* 半透明背景颜色，80% 不透明度 */
+  border-radius: 2px;
+}   
+}
+   
+.center_dvi {
+    width:  calc(100% - 10px);; /* 容器宽度为 800 像素 */
+}
+
+
+.back1{
+     /*    margin: 70px auto 60px;容器顶部距离页面 150 像素，左右居中对齐，底部无外边距 */
+ padding: 5px 1px; /* 上下内边距为 0，左右内边距为 20 像素 */
+ background-color: rgba(255, 255, 255, 0.7); /* 半透明背景颜色，80% 不透明度 */
+}
+/* ====== 文本左对齐样式 ====== */
+.text-left {
+    text-align: left; /* 将文本内容左对齐 */
+    padding: 0 25px; /* 上下内边距为 0，左右内边距为 25 像素 */
+}
+/* ====== 菜单对齐样式 ====== */
+.text-20 {
+     font-size: 20px; /* 设置文本字体大小为 14 像素 */
+     text-align: left; /* 文本左对齐 */
+     padding: 0 5px; /* 上下内边距为 0，左右内边距为 25 像素 */
+     margin: 0px auto 0px; /* 容器顶部距离页面 150 像素，左右居中对齐，底部无外边距 */
+}
+/* ====== 内部居中容器样式 ======================主标题===== */
+
+/* ====== 管理登录页面 ====== */
+.parent-container {
+ 
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 父容器高度为视口高度 */
+}
+
+.login_dvi {
+     border-radius: 8px;
+position: absolute;
+    top: 50%; /* 垂直方向中心 */
+    left: 50%; /* 水平方向中心 */
+    transform: translate(-50%, -50%); /* 通过translate使元素自身中心与父容器中心对齐 */
+    width: 80%; /* 宽度设为80%，可以根据需要调整 */
+    max-width: 350px; /* 最大宽度为800px */
+    padding: 20px; /* 设置适当的内边距 */
+    font-size: 18px; /* 设置字体大小 */
+    background-color: 	#f9f9f9; /* 设置背景颜色为白色    #ffffff       	#696969          */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    box-sizing: border-box; /* 确保内边距包含在总宽度和高度内 */
+    text-align: center; /* 使容器内所有元素左右居中 */
+ background-color: rgba(255, 255, 255, 0.15); /* 半透明背景颜色，80% 不透明度 */
+-webkit-user-select: none;
+}
+
+/* 输入框样式 */
+.login_dvi input[type="text"],
+.login_dvi input[type="password"],
+.login_dvi input[type="email"],
+.login_dvi input[type="submit"] {
+    width: calc(100% - 20px); /* 宽度为100%减去两侧内边距，确保对称 */
+    padding: 10px 10px; /* 设置上、下、左、右内边距为10px，确保对称 */
+    margin-bottom: 15px; /* 每个输入框与下一个元素之间的距离为15px */
+    border: 1px solid #4CAF50; /* 默认边框样式 */
+    border-radius: 3px; /* 设置圆角 */
+    font-size: 16px; /* 字体大小 */
+    box-shadow: none; /* 默认无阴影 */
+    box-sizing: border-box; /* 包含内边距在内的总宽度计算方式 */
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out; /* 添加过渡效果 */
+    background-color: rgba(255, 255, 255, 0.15); /* 半透明背景颜色，80% 不透明度 */
+}
+
+/* 设置文本框和密码框透明度 */
+.login_dvi input[type="text"],
+.login_dvi input[type="password"] {
+    opacity: 0.45; /* 设置透明度为0.75 */
+}
+
+
+/* 输入框聚焦样式 */
+.login_dvi input[type="text"]:focus,
+.login_dvi input[type="password"]:focus,
+.login_dvi input[type="email"]:focus {
+    border-color: #45a049; /* 聚焦时边框高亮为蓝色 */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* 聚焦时添加蓝色阴影 */
+    outline: none; /* 去除默认的聚焦边框 */
+}
+
+
+
+/* 表单与容器边框的距离 */
+form {
+    padding-top: 15px; /* 表单内部与容器边距 */
+}
+
+/* 按钮样式 */
+.login_dvi input[type="submit"] {
+    background-color: #4CAF50; /* 按钮背景颜色 */
+    color: white; /* 按钮文本颜色 */
+    cursor: pointer; /* 鼠标悬停时显示手势 */
+    border: none; /* 移除按钮边框 */
+ border-radius: 3px; /* 设置圆角 */
+ margin-bottom: 15px;
+}
+
+.login_dvi input[type="submit"]:hover {
+    background-color: #45a049; /* 悬停时按钮背景颜色变深 */
+}
+
+/* ================================ */
+
+/* ===============预览图片============================ */
+/* 预览窗口样式 */
+.img-preview {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.img-preview img {
+    max-width: 85%;      /* 最大宽度限制为 80% */
+    max-height: 85%;     /* 最大高度限制为 80% */
+    width: auto;         /* 宽度自动 */
+    height: auto;        /* 高度自动 */
+    object-fit: contain; /* 保持图片原始比例，避免拉伸 */
+}
+
+/* 显示预览时的样式 */
+.img-preview.active {
+    display: flex;
+}
+
+/* 上一张/下一张按钮样式 */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1001;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* ===============背景============================ */
